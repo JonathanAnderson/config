@@ -2,4 +2,11 @@ syntax on
 colorscheme slate 
 "colorscheme desert
 set tabstop=4
-
+set runtimepath^=~/.config/vim/bundle/ctrlp.vim
+set wildignore+=*/00_BUILD_00/*
+let g:ctrlp_user_command = {
+	\ 'types': {
+		\ 1: ['.git', 'cd %s && git ls-files'],
+		\ },
+	\ 'fallback': 'find %s -type f'
+	\ }

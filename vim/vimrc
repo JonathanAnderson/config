@@ -123,7 +123,7 @@ imap <F5> <ESC>:setlocal spell! spelllang=en_us<cr>
 
 " hint to keep lines short
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=100
 endif
 
 " jump to last position in file

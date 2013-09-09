@@ -13,8 +13,8 @@ export PATH=${PATH}:/home/janders/bin:${PROJECT}/build/gcc-x86-64/bin:${PROJECT}
 source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/scripts.zsh
 
-if [[ "$TERM" != "screen-256color" ]]
-then
-  tmux attach-session -t "$USER" || tmux new-session -s "$USER"
-exit
-fi
+#if [[ "$TERM" != "screen-256color" ]]
+#then
+#  tmux attach-session -t "$USER" || tmux new-session -s "$USER"
+#exit
+#fi

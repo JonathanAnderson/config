@@ -59,14 +59,31 @@ if version >= 700
   au InsertLeave * hi StatusLine ctermbg=240 ctermfg=12
 endif
 
+let g:syntastic_cpp_include_dirs = [ '/home/janders/code.work/project/source']
+let g:syntastic_check_on_open=1
+let g:syntastic_enable_signs=1
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_remove_include_errors = 0
+
 " set leader key to comma
 let mapleader = ","
 
 " ctrlp config
-let g:ctrlp_map = '<leader>f'
+"let g:ctrlp_map = '<leader>f'
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_max_height = 30
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_match_window_reversed = 0
+
+" 
+set wildignore+=*/00_BUILD_00/*
+set wildignore+=*/.git/*
+set wildignore+=*REMOVE*
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|vendor$',
+  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ }
 
 " use silver searcher for ctrlp
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

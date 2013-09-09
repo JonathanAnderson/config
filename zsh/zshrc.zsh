@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.config/zsh/oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -32,18 +32,11 @@ ZSH_THEME="janders"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git last-working-dir sublime app_test rand-quote tmux)
+plugins=(git last-working-dir sublime app_test rand-quote)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
-HISTFILE=~/.zsh_history
-HISTSIZE=5000
-SAVEHIST=1000
-setopt appendhistory autocd extendedglob
-
-source ~/.my_profile
-source ~/.my_aliases
-source ~/.my_scripts
+source ~/.config/zsh/profile.zsh

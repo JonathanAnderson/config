@@ -30,7 +30,5 @@
 	hg-git-compat = true
 [core]
 	excludesfile = /home/janders/.gitignore_global
-[push]
-	default = simple
 [branch]  
   autosetuprebase = always
